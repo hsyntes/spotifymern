@@ -1,0 +1,5 @@
+@media (max-width: 992px) {
+  #song-card .card-header {
+    height: 120px;
+  }
+}

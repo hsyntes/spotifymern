@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --color-primary: 10, 158, 80;
+  --color-secondary: 241, 26, 123;
+  --color-dark: 32, 32, 32;
+  --color-darker: 28, 28, 28;
+  --color-black: 14, 14, 14;
+  --color-white: 255, 255, 255;
+  --color-light: 247, 247, 247;
+  --color-danger: 244, 67, 54;
+}
+
+#splash-backdrop, #modal-backdrop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+#modal-backdrop {
+  background-color: rgba(var(--color-dark), 0.8);
+}/*# sourceMappingURL=main.css.map */
