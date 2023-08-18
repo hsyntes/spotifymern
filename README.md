@@ -18,6 +18,6 @@ Tailwind CSS: A utility-first CSS framework, providing a set of pre-defined clas
 
 ## API
 
-### InstaMERN Backend API
+### SpotifyMERN Backend API
 
 The SpotifyMERN Backend API serves as the core of the SpotifyMERN platform, providing user authentication, data management, AWS Cloud and more. Explore the API documentation for detailed information on endpoints, usage, and integration.
