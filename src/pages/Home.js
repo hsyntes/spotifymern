@@ -20,7 +20,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Card className="rounded-md shadow bg-white dark:bg-dark m-2 p-6 mb-4">
+      <Card className="rounded-md shadow bg-white dark:bg-dark m-2 p-6 mb-8">
         <Card.Header className="flex items-center mb-8">
           <h1 className="font-semibold text-xl">SpotifyMERN musics</h1>
           <Link
@@ -34,7 +34,7 @@ const HomePage = () => {
           {musics?.map((music) => (
             <Card
               id="song-card"
-              className="col-span-6 lg:col-span-3 xl:col-span-2 !bg-darker hover:!bg-black group relative rounded-md cursor-pointer !px-4 !py-8"
+              className="col-span-6 lg:col-span-3 !bg-darker hover:!bg-black group relative rounded-md cursor-pointer !px-4 !py-8"
               key={music._id}
               onClick={() =>
                 dispatch(musicSliceActions.setSelectedMusic(music.source))
@@ -71,6 +71,12 @@ const HomePage = () => {
           ))}
         </Card.Body>
         <Card.Footer></Card.Footer>
+      </Card>
+      <Card className="rounded-md shadow bg-white dark:bg-dark m-2 p-6">
+        <Card.Header className="mb-8">
+          <h1 className="font-semibold text-xl">Categories</h1>
+        </Card.Header>
+        <Card.Body></Card.Body>
       </Card>
     </>
   );
