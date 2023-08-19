@@ -12,7 +12,7 @@ const Playlist = ({ musics }) => {
       <ul>
         {musics?.map((music) => (
           <li
-            className="flex items-center mb-4 last:mb-0 cursor-pointer py-3 lg:px-3 rounded hover:bg-light hover:dark:bg-darker"
+            className="flex items-center mb-4 last:mb-0 cursor-pointer p-2 lg:p-4 rounded hover:bg-light hover:dark:bg-darker"
             onClick={() =>
               dispatch(musicSliceActions.setSelectedMusic(music.source))
             }

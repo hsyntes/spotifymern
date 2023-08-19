@@ -21,8 +21,6 @@ const CategoriesPage = () => {
     }
   );
 
-  console.log(musics);
-
   if (isMusicsLoading)
     return (
       <center>
@@ -45,7 +43,7 @@ const CategoriesPage = () => {
             >
               <FontAwesomeIcon icon={faAngleLeft} size="xl" />
             </Link>
-            <h4 className="font-bold text-2xl ms-4">
+            <h4 className="font-bold text-3xl ms-4">
               {`${category.slice(0, 1).toUpperCase()}${category
                 .slice(1)
                 .toLowerCase()}`}

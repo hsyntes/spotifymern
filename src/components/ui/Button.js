@@ -1,4 +1,12 @@
-const Button = ({ type, variant, className, onClick, children, disabled }) => {
+const Button = ({
+  type,
+  variant,
+  className,
+  onClick,
+  style,
+  children,
+  disabled,
+}) => {
   let classes = `font-black px-4 py-2 rounded shadow transition text-sm ${className} `;
 
   if (variant === "primary")
@@ -20,6 +28,7 @@ const Button = ({ type, variant, className, onClick, children, disabled }) => {
       className={classes}
       onClick={onClick}
       disabled={disabled}
+      style={style}
     >
       {children}
     </button>
