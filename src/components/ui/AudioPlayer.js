@@ -10,7 +10,7 @@ const AudioPlayer = () => {
         src={music}
         controls
         autoPlay
-        className="w-96 lg:w-1/3 accent-primary"
+        className="w-96 lg:w-2/3 accent-primary"
       />
     </div>
   );

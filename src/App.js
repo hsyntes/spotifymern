@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { themeSliceActions } from "./store/theme/theme-slice";
 import { useEffect } from "react";
 import CategoriesPage from "./pages/Categories";
+import MusicsPage from "./pages/Musics";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "/category/:category", element: <CategoriesPage /> },
+      { path: "category/:category", element: <CategoriesPage /> },
+      { path: "musics", element: <MusicsPage /> },
     ],
   },
 ]);

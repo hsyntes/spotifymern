@@ -13,7 +13,7 @@ const Musics = ({ musics }) => {
       <Card.Header className="flex items-center mb-8">
         <h1 className="font-semibold text-2xl">SpotifyMERN musics</h1>
         <Link
-          to="/"
+          to="/musics"
           className="font-semibold text-primary hover:text-primary-dark ms-auto transition"
         >
           See all

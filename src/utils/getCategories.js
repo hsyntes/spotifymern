@@ -1,6 +1,6 @@
 const getCategories = async () => {
   const response = await fetch(
-    "http://localhost:8000/spotifymern/musics/categories/all"
+    "http://localhost:8000/spotifymern/musics/categories"
   );
 
   const { data } = await response.json();
