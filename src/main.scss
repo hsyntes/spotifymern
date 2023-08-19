@@ -13,6 +13,11 @@
   --color-danger: 244, 67, 54;
 }
 
+button[disabled] {
+  // background-color: gray !important;
+  opacity: 0.25;
+}
+
 #splash-backdrop {
   width: 100%;
   height: 100vh;

@@ -12,6 +12,10 @@
   --color-danger: 244, 67, 54;
 }
 
+button[disabled] {
+  opacity: 0.25;
+}
+
 #splash-backdrop, #modal-backdrop {
   width: 100%;
   height: 100vh;
