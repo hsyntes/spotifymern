@@ -23,8 +23,8 @@ const Categories = ({ categories }) => {
               <img
                 src={`https://spotifymern.s3.us-east-2.amazonaws.com/thumbnails/categories/${category._id}.jpg`}
                 className="w-full h-full rounded-md object-cover opacity-50 lg:opacity-100 group-hover:opacity-50 transition"
-                loading="lazy"
                 alt="Song Thumbnail"
+                loading="lazy"
               />
               <span className="lg:hidden peer group-hover:flex items-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 select-none cursor-pointer">
                 <span className="text-4xl me-3">

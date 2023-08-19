@@ -36,8 +36,8 @@ const Musics = ({ musics }) => {
               <img
                 src={music.thumbnail}
                 className="w-full h-full rounded-md object-cover"
-                loading="lazy"
                 alt="Song Thumbnail"
+                loading="lazy"
               />
             </Card.Header>
             <Card.Body className="mb-8">

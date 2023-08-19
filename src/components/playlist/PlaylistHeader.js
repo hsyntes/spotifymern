@@ -42,6 +42,7 @@ const PlaylistHeader = ({ type, title, musics }) => {
               }
               className="w-full h-full object-cover rounded"
               alt="Thumbnail"
+              loading="lazy"
             />
           </div>
           <div className="mt-8 lg:ms-8 lg:mt-0 mb-4">
@@ -59,7 +60,7 @@ const PlaylistHeader = ({ type, title, musics }) => {
               &nbsp;and more
             </p>
             <div className="flex items-center">
-              <img src={logo} width={24} alt="Logo" />
+              <img src={logo} width={24} alt="Logo" loading="lazy" />
               <span className="ms-1">SpotifyMERN</span>
               <span className="ms-1">• {musics.length} songs</span>
             </div>

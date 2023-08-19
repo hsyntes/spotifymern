@@ -28,6 +28,7 @@ const Playlist = ({ musics }) => {
                 src={music.thumbnail}
                 className="w-full h-full rounded-full object-cover"
                 alt="Category"
+                loading="lazy"
               />
             </div>
             <div className="ms-6">
