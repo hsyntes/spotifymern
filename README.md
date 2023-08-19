@@ -2,6 +2,8 @@
 
 This project is under development.
 
+[![SpotifyMERN](https://github.com/hsyntes/spotifymern/blob/main/src/logo.svg)](https://spotifymern.netlify.app)
+
 Welcome to the frontend documentation of SpotifyMERN, a music streaming application inspired by Spotify. This documentation provides an overview of the frontend architecture, components, and key functionalities of the application.
 
 ## Technologies Used
@@ -21,3 +23,7 @@ Tailwind CSS: A utility-first CSS framework, providing a set of pre-defined clas
 ### SpotifyMERN Backend API
 
 The SpotifyMERN Backend API serves as the core of the SpotifyMERN platform, providing user authentication, data management, AWS Cloud and more. Explore the API documentation for detailed information on endpoints, usage, and integration.
+
+## 🔗 Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hsyntes)
