@@ -1,17 +1,21 @@
 import "./App.css";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
+import Layout from "./components/layout/Layout";
 import HomePage from "./pages/Home";
 import { useDispatch, useSelector } from "react-redux";
 import { themeSliceActions } from "./store/theme/theme-slice";
 import { useEffect } from "react";
+import CategoriesPage from "./pages/Categories";
 
 const router = createBrowserRouter([
   {
     patH: "/",
     element: <Layout />,
-    children: [{ index: true, element: <HomePage /> }],
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: "/category/:category", element: <CategoriesPage /> },
+    ],
   },
 ]);
 

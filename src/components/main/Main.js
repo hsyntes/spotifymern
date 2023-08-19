@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Aside from "./Aside";
+import Aside from "../ui/Aside";
 
 const Main = () => (
   <div className="lg:grid lg:grid-cols-12 lg:gap-4 px-6 mb-24">

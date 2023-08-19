@@ -1,6 +1,6 @@
-import Header from "../ui/Header";
+import Header from "../header/Header";
+import Main from "../main/Main";
 import AudioPlayer from "../ui/AudioPlayer";
-import Main from "../ui/Main";
 
 const Layout = () => {
   return (

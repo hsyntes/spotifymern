@@ -1,5 +1,5 @@
-import Brand from "./Brand";
-import Button from "./Button";
+import Brand from "../ui/Brand";
+import Button from "../ui/Button";
 
 const Header = () => (
   <header className="flex items-center sticky p-4 lg:px-6 top-0 bg-light dark:bg-black z-10 my-6">

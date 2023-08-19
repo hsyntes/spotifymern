@@ -11,7 +11,7 @@ const Musics = ({ musics }) => {
   return (
     <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-8">
       <Card.Header className="flex items-center mb-8">
-        <h1 className="font-semibold text-xl">SpotifyMERN musics</h1>
+        <h1 className="font-semibold text-2xl">SpotifyMERN musics</h1>
         <Link
           to="/"
           className="font-semibold text-primary hover:text-primary-dark ms-auto transition"
