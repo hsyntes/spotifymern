@@ -5,9 +5,9 @@
 :root {
   --color-primary: 10, 158, 80;
   --color-secondary: 241, 26, 123;
-  --color-dark: 32, 32, 32;
-  --color-darker: 28, 28, 28;
-  --color-black: 14, 14, 14;
+  --color-dark: 24, 24, 24;
+  --color-darker: 18, 18, 18;
+  --color-black: 12, 12, 12;
   --color-white: 255, 255, 255;
   --color-light: 247, 247, 247;
   --color-danger: 244, 67, 54;
@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 0;
+  z-index: 10 !important;
 }
 
 #modal-backdrop {

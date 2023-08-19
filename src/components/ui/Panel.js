@@ -14,7 +14,7 @@ import Card from "./Card";
 const Panel = () => {
   return (
     <>
-      <ul className="rounded-md shadow bg-white dark:bg-dark m-2 mb-4 p-6">
+      <ul className="rounded-md shadow bg-white dark:bg-dark mb-4 p-6">
         <li className="mb-6">
           <NavLink
             to="/"
@@ -44,7 +44,7 @@ const Panel = () => {
           </NavLink>
         </li>
       </ul>
-      <ul className="rounded-md shadow bg-white dark:bg-dark m-2 mb-4 p-6">
+      <ul className="rounded-md shadow bg-white dark:bg-dark mb-4 p-6">
         <div className="flex items-center">
           <h6>
             <FontAwesomeIcon icon={faBookBookmark} size="lg" />
@@ -60,7 +60,7 @@ const Panel = () => {
           </Button>
         </div>
       </ul>
-      <Card className="bg-white dark:bg-dark rounded-md m-2 mb-4 !p-6">
+      <Card className="bg-white dark:bg-dark rounded-md mb-4 !p-6">
         <Card.Header>
           <h6 className="font-medium">Create your first playlist</h6>
         </Card.Header>
@@ -74,7 +74,7 @@ const Panel = () => {
           </Button>
         </Card.Footer>
       </Card>
-      <Card className="bg-white dark:bg-dark rounded-md m-2 !p-6">
+      <Card className="bg-white dark:bg-dark rounded-md !p-6">
         <Card.Header>
           <h6 className="font-medium">Like songs your favorites</h6>
         </Card.Header>
