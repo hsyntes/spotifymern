@@ -38,12 +38,14 @@ function App() {
   const themeState = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
-  const { theme } = themeState;
-
   // * Fetching current user
-  const { data: user, isLoading: isUserLoading } = useQuery("getCurrentUser", {
+  const { data: user, isLoading: isUserLoading } = useQuery({
+    queryKey: "getCurrentUser",
     queryFn: getCurrentUser,
   });
+
+  const { theme } = themeState;
+  console.log(user);
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
