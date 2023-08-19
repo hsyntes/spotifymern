@@ -27,7 +27,13 @@ const PlaylistHeader = ({ type, title, musics }) => {
             </h4>
           </div>
         )}
-        <section className="lg:flex lg:items-end">
+        <section
+          className={
+            type === "category"
+              ? "lg:flex lg:items-end"
+              : "lg:flex lg:items-center"
+          }
+        >
           <div
             style={{
               width: "256px",
@@ -45,7 +51,12 @@ const PlaylistHeader = ({ type, title, musics }) => {
               loading="lazy"
             />
           </div>
-          <div className="mt-8 lg:ms-8 lg:mt-0 mb-4">
+          <div className="mt-8 lg:ms-8 lg:mt-0 lg:mb-4">
+            {type !== "category" && (
+              <h1 className="hidden lg:block font-bold text-7xl mb-4">
+                SpotifyMERN
+              </h1>
+            )}
             <span>Playlist</span>
             {type === "category" && (
               <h1 className="font-bold text-7xl lg:text-8xl mb-3">

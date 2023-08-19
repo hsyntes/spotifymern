@@ -1,10 +1,11 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Card from "../ui/Card";
 import { musicSliceActions } from "../../store/music/music-slice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const Playlist = ({ musics }) => {
+  const musicState = useSelector((state) => state.music);
   const dispatch = useDispatch();
 
   return (
@@ -32,8 +33,24 @@ const Playlist = ({ musics }) => {
               />
             </div>
             <div className="ms-6">
-              <h1 className="font-semibold">{music.name}</h1>
-              <p className="text-gray-500">{music.singer}</p>
+              <h1
+                className={
+                  musicState.music === music.source
+                    ? "font-semibold text-primary"
+                    : "font-semibold"
+                }
+              >
+                {music.name}
+              </h1>
+              <p
+                className={
+                  musicState.music === music.source
+                    ? "text-primary-dark opacity-75"
+                    : "text-gray-500"
+                }
+              >
+                {music.singer}
+              </p>
             </div>
             <div className="ms-auto">
               <button
@@ -43,7 +60,7 @@ const Playlist = ({ musics }) => {
                   height: "36px",
                 }}
               >
-                <FontAwesomeIcon icon={faPlay} />
+                <FontAwesomeIcon icon={faPlay} className="text-dark" />
               </button>
             </div>
           </li>

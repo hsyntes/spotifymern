@@ -20,7 +20,7 @@ const HomePage = () => {
     refetchOnWindowFocus: false,
   });
 
-  if (isMusicsLoading && isCategoriesLoading) return <Splash />;
+  if (isMusicsLoading || isCategoriesLoading) return <Splash />;
 
   return (
     <>

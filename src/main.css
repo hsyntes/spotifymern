@@ -12,6 +12,16 @@
   --color-danger: 244, 67, 54;
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: rgb(var(--color-primary));
+}
+
 button[disabled] {
   opacity: 0.25;
 }

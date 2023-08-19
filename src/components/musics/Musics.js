@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import Card from "../ui/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { musicSliceActions } from "../../store/music/music-slice";
 
 const Musics = ({ musics }) => {
+  const musicState = useSelector((state) => state.music);
   const dispatch = useDispatch();
 
   return (
@@ -41,10 +42,26 @@ const Musics = ({ musics }) => {
               />
             </Card.Header>
             <Card.Body className="mb-8">
-              <h6 className="font-semibold">{music.name}</h6>
+              <h6
+                className={
+                  musicState.music === music.source
+                    ? "font-semibold text-primary"
+                    : "font-semibold"
+                }
+              >
+                {music.name}
+              </h6>
             </Card.Body>
             <Card.Footer>
-              <p className="text-gray-500">{music.singer}</p>
+              <p
+                className={
+                  musicState.music === music.source
+                    ? "text-primary-dark opacity-75"
+                    : "text-gray-500"
+                }
+              >
+                {music.singer}
+              </p>{" "}
             </Card.Footer>
             <div
               className="opacity-0 group-hover:opacity-100 flex items-center bg-primary rounded-full absolute justify-center bottom-2 group-hover:bottom-4 right-2 transition-all"
