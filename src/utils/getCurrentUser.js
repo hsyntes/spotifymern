@@ -16,8 +16,6 @@ const getCurrentUser = async () => {
       }
     );
 
-    console.log(response);
-
     if (!response.ok) return null;
 
     const { data } = await response.json();
