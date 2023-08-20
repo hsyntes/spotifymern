@@ -22,6 +22,10 @@ const Button = ({
 
   if (variant === "link") classes += "shadow-none  !px-0 !py-0";
 
+  if (variant === "blue") classes += "bg-blue-700 hover:bg-blue-900 text-white";
+
+  if (variant === "pink") classes += "bg-pink-700 hover:bg-pink-900 text-white";
+
   return (
     <button
       type={type}

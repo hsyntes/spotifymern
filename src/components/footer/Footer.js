@@ -1,4 +1,11 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "../ui/Button";
 import Card from "../ui/Card";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -17,15 +24,54 @@ const Footer = () => {
         <div className="ms-4 w-full">
           <h1 className="font-bold text-2xl">Huseyin Ates</h1>
           <p className="mb-2">Full Stack Developer | MERN</p>
-          <p className="text-justify">
-            Full Stack MERN Developer with expertise in building robust and
-            scalable web applications. Proficient in using React & Next.js to
-            create interactive user interfaces and skilled in handling
+          <p className="text-justify mb-6">
+            Full Stack MERN Developer with proficient in using React & Next.js
+            to create interactive user interfaces and skilled in handling
             server-side development using Node.js, Express.js with MVC
             architecture, handling database operations including data models and
-            advanced schema design using MongoDB, implementing AWS Cloud
-            Computing & services.
+            advanced schema design using MongoDB, implementing Amazon Web
+            Services & Cloud Computing.
           </p>
+          <h4 className="font-bold text-lg mb-2">Contact me</h4>
+          <section>
+            <Button
+              type="button"
+              variant="dark"
+              className="!bg-dark lg:dark:!bg-black m-1"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+              <a
+                href="https://github.com/hsyntes"
+                target="_blank"
+                rel="noreferrer"
+                className="ms-2"
+              >
+                GitHub
+              </a>
+            </Button>
+            <Button type="button" variant="blue" className="m-1">
+              <FontAwesomeIcon icon={faLinkedin} />
+              <a
+                href="https://linkedin.com/in/hsyntes"
+                target="_blank"
+                rel="noreferrer"
+                className="ms-2"
+              >
+                LinkedIn
+              </a>
+            </Button>
+            <Button type="button" variant="pink" className="m-1">
+              <FontAwesomeIcon icon={faInstagram} />
+              <a
+                href="https://instagram.com/hsyntes"
+                target="_blank"
+                rel="noreferrer"
+                className="ms-2"
+              >
+                Instagram
+              </a>
+            </Button>
+          </section>
         </div>
       </Card.Body>
     </Card>
