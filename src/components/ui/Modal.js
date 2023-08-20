@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Modal = ({ show, className, children }) => {
   if (!show) return null;
 
-  const classes = `modal bg-white dark:bg-dark rounded p-5 shadow-lg ${className}`;
+  const classes = `modal bg-white dark:bg-dark rounded p-6 shadow ${className}`;
 
   return createPortal(
     <div id="modal-backdrop">

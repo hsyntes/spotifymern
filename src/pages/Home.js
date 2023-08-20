@@ -35,7 +35,7 @@ const HomePage = () => {
       <Musics musics={musics} />
       <Categories categories={categories} />
       <section className="block lg:hidden mb-10">
-        <CreatePlaylist />
+        <CreatePlaylist musics={recommendedMusics} />
       </section>
       <Recommended musics={recommendedMusics} />
       <section className="block lg:hidden mb-10">

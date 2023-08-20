@@ -4,16 +4,39 @@ import Card from "../ui/Card";
 import { faPlayCircle, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Modal from "../ui/Modal";
+import Input from "../ui/Input";
+import Playlist from "./Playlist";
 import { useQuery } from "react-query";
+import getRecommendedMusics from "../../utils/getRecommendedMusics";
+import useInput from "../../hooks/useInput";
+import searchMusics from "../../utils/searchMusics";
 
 const CreatePlaylist = () => {
   const [modal, setModal] = useState(false);
 
+  const {
+    state: { value: search, isValid: isSearchValid },
+    handleOnChange: handleSearchOnChange,
+  } = useInput();
+
+  const { data: recommendedMusics, isLoading: isRecommendedMusicsLoading } =
+    useQuery({
+      queryKey: "getRecommendedMusics",
+      queryFn: getRecommendedMusics,
+    });
+
+  const { data: searchedMusics, isLoading: isSearchMusicsLoading } = useQuery(
+    ["searchMusics", search],
+    {
+      queryFn: () => {
+        if (isSearchValid) return searchMusics(search);
+      },
+    }
+  );
+
   const handleModal = () => setModal(!modal);
 
-  const {} = useQuery({
-    queryKey: "getM",
-  });
+  console.log(searchedMusics);
 
   return (
     <>
@@ -40,8 +63,16 @@ const CreatePlaylist = () => {
           </Button>
         </Card.Footer>
       </Card>
-      <Modal show={modal} className="w-3/4 lg:w-1/4">
+      <Modal show={modal} className="w-5/6 lg:w-2/4 py-8">
         <Modal.Header>
+          <Input
+            type="text"
+            name="search"
+            value={search}
+            onChange={handleSearchOnChange}
+            placeholder="Search musics"
+            className="!bg-white dark:!bg-dark"
+          />
           <FontAwesomeIcon
             icon={faTimes}
             size="xl"
@@ -49,8 +80,9 @@ const CreatePlaylist = () => {
             onClick={handleModal}
           />
         </Modal.Header>
-        <Modal.Body></Modal.Body>
-        <Modal.Footer></Modal.Footer>
+        <Modal.Body>
+          <h6 className="font-semibold">Suggestions</h6>
+        </Modal.Body>
       </Modal>
     </>
   );
