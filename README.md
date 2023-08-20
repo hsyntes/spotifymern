@@ -2,7 +2,7 @@
 
 This project is under development.
 
-[![SpotifyMERN](https://github.com/hsyntes/spotifymern/blob/main/src/logo.svg)](https://spotifymern.netlify.app)
+[![SpotifyMERN](https://github.com/hsyntes/spotifymern/blob/main/src/logo.svg)](https://spotifymern.vercel.app/)
 
 Welcome to the frontend documentation of SpotifyMERN, a music streaming application inspired by Spotify. This documentation provides an overview of the frontend architecture, components, and key functionalities of the application.
 
