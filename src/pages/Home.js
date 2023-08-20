@@ -5,6 +5,8 @@ import getCategories from "../utils/getCategories";
 import Musics from "../components/musics/Musics";
 import Categories from "../components/categories/Categories";
 import Recommended from "../components/recommended/Recommended";
+import CreatePlaylist from "../components/playlist/CreatePlaylist";
+import BrowseSongs from "../components/musics/BrowseSongs";
 
 const HomePage = () => {
   const { data: musics, isLoading: isMusicsLoading } = useQuery({
@@ -24,7 +26,13 @@ const HomePage = () => {
     <>
       <Musics musics={musics} />
       <Categories categories={categories} />
+      <section className="block lg:hidden mb-10">
+        <CreatePlaylist />
+      </section>
       <Recommended />
+      <section className="block lg:hidden mb-10">
+        <BrowseSongs />
+      </section>
     </>
   );
 };

@@ -5,7 +5,7 @@ const Categories = ({ categories }) => {
   const navigate = useNavigate();
 
   return (
-    <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-12">
+    <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-10">
       <Card.Header className="mb-6">
         <h1 className="font-semibold text-2xl">Categories</h1>
       </Card.Header>

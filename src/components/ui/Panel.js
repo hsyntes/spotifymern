@@ -7,11 +7,15 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Card from "./Card";
+import CreatePlaylist from "../playlist/CreatePlaylist";
+import BrowseSongs from "../musics/BrowseSongs";
 
 const Panel = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <ul className="rounded-md shadow bg-white dark:bg-dark mb-4 p-6">
@@ -60,36 +64,8 @@ const Panel = () => {
           </Button>
         </div>
       </ul>
-      <Card className="bg-white dark:bg-dark rounded-md mb-4 !p-6">
-        <Card.Header>
-          <h6 className="font-medium">Create your first playlist</h6>
-        </Card.Header>
-        <Card.Body className="mb-4">
-          <p className="text-gray-500 text-sm">It's easy, we'' help you</p>
-        </Card.Body>
-        <Card.Footer>
-          <Button type="button" variant="light">
-            <span className="me-3">Create playlist</span>
-            <FontAwesomeIcon icon={faPlayCircle} />
-          </Button>
-        </Card.Footer>
-      </Card>
-      <Card className="bg-white dark:bg-dark rounded-md !p-6">
-        <Card.Header>
-          <h6 className="font-medium">Like songs your favorites</h6>
-        </Card.Header>
-        <Card.Body className="mb-4">
-          <p className="text-gray-500 text-sm">
-            We'll keep you updated on new episodes
-          </p>
-        </Card.Body>
-        <Card.Footer>
-          <Button type="button" variant="light">
-            <span className="me-3">Browse songs</span>
-            <FontAwesomeIcon icon={faMusic} />
-          </Button>
-        </Card.Footer>
-      </Card>
+      <CreatePlaylist />
+      <BrowseSongs />
     </>
   );
 };
