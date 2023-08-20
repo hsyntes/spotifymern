@@ -46,6 +46,12 @@ Please visit here to see the backend code: [SpotifyMERN - Backend](https://githu
 
 [![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/search-mobile-dark.png)](https://spotifymern.vercel.app)
 
+## Authentication
+
+User authentication is managed using JWT tokens obtained from the backend upon successful login. The JWT token is stored in the Secure Response Headers and included in the Authorization header for protected API requests also hashing passwords and save them to MongoDB
+
+[![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/authentication-mobile-dark.png)](https://spotifymern.vercel.app)
+
 ## 🔗 Contact
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hsyntes)
