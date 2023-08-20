@@ -38,7 +38,7 @@ The SpotifyMERN Backend API serves as the core of the SpotifyMERN platform, prov
 
 ## AWS Cloud Integration
 
-Loading songs from AWS
+Amazon S3 is used for storing and serving musics, including categories, thumbnail images and users' profile pictures.
 
 [![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/aws-mobile-dark.png)](https://spotifymern.vercel.app)
 
