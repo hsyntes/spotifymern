@@ -42,6 +42,10 @@ The SpotifyMERN Backend API serves as the core of the SpotifyMERN platform, prov
 
 Please visit here to see the backend code: [SpotifyMERN - Backend](https://github.com/hsyntes/spotifymern-api)
 
+## Powerful MongoDB Atlash Search Engine
+
+[![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/search-mobile-dark.png)](https://spotifymern.vercel.app)
+
 ## 🔗 Contact
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hsyntes)
