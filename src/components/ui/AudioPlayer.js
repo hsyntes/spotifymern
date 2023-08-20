@@ -5,12 +5,12 @@ const AudioPlayer = () => {
   const { music } = musicState;
 
   return (
-    <div className="w-full flex flex-col items-center justify-center fixed bottom-0 bg-white dark:bg-black py-4">
+    <div className="w-full flex flex-col items-center justify-center fixed bottom-0 bg-white dark:bg-black mx-auto p-4">
       <audio
         src={music}
         controls
         autoPlay
-        className="w-96 lg:w-2/3 accent-primary"
+        className="w-full lg:w-1/4 caret-primary"
       />
     </div>
   );
