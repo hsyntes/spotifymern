@@ -100,8 +100,8 @@ const Signup = () => {
     <Card className="w-full mx-4 lg:w-2/4 lg:mx-0 !shadow-none lg:!shadow-md !bg-light lg:!bg-white dark:!bg-black lg:dark:!bg-dark px-6 py-12 lg:px-12 lg:py-12 rounded my-12">
       <Card.Header className="ps-0 mb-10">
         <Link to="/" id="brand" className="flex items-center">
-          <img src={logo} width={52} alt="App" className="rounded-full" />
-          <h1 className="font-bold text-4xl ms-3">SpotifyMERN</h1>
+          <img src={logo} width={42} alt="App" className="rounded-full" />
+          <h1 className="font-bold text-3xl ms-1">SpotifyMERN</h1>
         </Link>
       </Card.Header>
       <Form method="post">
