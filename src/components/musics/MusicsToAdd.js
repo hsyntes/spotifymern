@@ -11,7 +11,7 @@ const MusicsToAdd = ({ musics }) => {
     <ul>
       {musics?.map((music) => (
         <li
-          className="flex items-center mb-1 last:mb-0 cursor-pointer py-4 rounded hover:bg-light hover:dark:bg-darker"
+          className="flex items-center mb-1 last:mb-0 cursor-pointer p-3 rounded hover:bg-light hover:dark:bg-darker"
           key={music._id}
           onClick={() =>
             dispatch(musicSliceActions.setSelectedMusic(music.source))

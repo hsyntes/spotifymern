@@ -15,11 +15,15 @@ const SearchMusics = () => {
 
   return (
     <>
-      <center className="lg:hidden relative mb-6" onClick={handleModal}>
+      <center
+        className="lg:hidden relative mb-6 w-full mx-auto px-4"
+        onClick={handleModal}
+      >
         <input
           type="text"
           placeholder="Search"
-          className="form-input bg-light dark:bg-black focus:ring-0 caret-light dark:caret-black focus:border-gray-500 rounded border-gray-500 w-96"
+          className="form-input bg-light dark:bg-black focus:ring-0 caret-light dark:caret-black focus:border-gray-500 rounded border-gray-500 w-full"
+          readOnly
         />
         <FontAwesomeIcon
           icon={faSearch}
