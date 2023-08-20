@@ -27,7 +27,12 @@ const Musics = ({ musics }) => {
             className="col-span-6 lg:col-span-3 !bg-light hover:!bg-white dark:!bg-darker hover:dark:!bg-black group relative rounded-md cursor-pointer !px-4 !py-8"
             key={music._id}
             onClick={() =>
-              dispatch(musicSliceActions.setSelectedMusic(music.source))
+              dispatch(
+                musicSliceActions.setSelectedMusic({
+                  id: music._id,
+                  source: music.source,
+                })
+              )
             }
           >
             <Card.Header

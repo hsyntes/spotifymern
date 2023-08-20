@@ -3,7 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const musicSlice = createSlice({
   name: "music",
   initialState: {
-    music: null,
+    music: {
+      id: null,
+      source: null,
+    },
   },
   reducers: {
     setSelectedMusic(state, action) {

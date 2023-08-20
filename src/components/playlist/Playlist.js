@@ -18,7 +18,12 @@ const Playlist = ({ title, musics }) => {
           <li
             className="flex items-center mb-1 last:mb-0 cursor-pointer p-2 lg:p-4 rounded hover:bg-light hover:dark:bg-darker"
             onClick={() =>
-              dispatch(musicSliceActions.setSelectedMusic(music.source))
+              dispatch(
+                musicSliceActions.setSelectedMusic({
+                  id: music._id,
+                  source: music.source,
+                })
+              )
             }
             key={music._id}
           >

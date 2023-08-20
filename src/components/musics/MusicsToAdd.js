@@ -14,7 +14,12 @@ const MusicsToAdd = ({ musics }) => {
           className="flex items-center mb-1 last:mb-0 cursor-pointer p-3 rounded hover:bg-light hover:dark:bg-darker"
           key={music._id}
           onClick={() =>
-            dispatch(musicSliceActions.setSelectedMusic(music.source))
+            dispatch(
+              musicSliceActions.setSelectedMusic({
+                id: music._id,
+                source: music.source,
+              })
+            )
           }
         >
           <div
