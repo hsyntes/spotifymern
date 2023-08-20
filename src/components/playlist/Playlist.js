@@ -43,7 +43,7 @@ const Playlist = ({ title, musics }) => {
             <div className="ms-6">
               <h1
                 className={
-                  musicState.music === music.source
+                  musicState.music.source === music.source
                     ? "font-semibold text-primary"
                     : "font-semibold"
                 }
@@ -52,7 +52,7 @@ const Playlist = ({ title, musics }) => {
               </h1>
               <p
                 className={
-                  musicState.music === music.source
+                  musicState.music.source === music.source
                     ? "text-primary-dark opacity-75"
                     : "text-gray-500"
                 }

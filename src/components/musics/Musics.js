@@ -49,7 +49,7 @@ const Musics = ({ musics }) => {
             <Card.Body className="mb-8">
               <h6
                 className={
-                  musicState.music === music.source
+                  musicState.music.source === music.source
                     ? "font-semibold text-primary"
                     : "font-semibold"
                 }
@@ -60,7 +60,7 @@ const Musics = ({ musics }) => {
             <Card.Footer>
               <p
                 className={
-                  musicState.music === music.source
+                  musicState.music.source === music.source
                     ? "text-primary-dark opacity-75"
                     : "text-gray-500"
                 }
