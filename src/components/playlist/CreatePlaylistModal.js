@@ -36,7 +36,7 @@ const CreatePlaylistModal = ({ modal, handleModal }) => {
           name="search"
           value={search}
           onChange={handleSearchOnChange}
-          placeholder="Search musics"
+          placeholder="Search"
           className="!bg-white dark:!bg-dark"
         />
         <FontAwesomeIcon

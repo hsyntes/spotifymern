@@ -32,7 +32,14 @@ const Panel = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="flex items-center" onClick={handleModal}>
+          <NavLink
+            className={
+              modal
+                ? "flex items-center"
+                : "flex items-center text-gray-500 hover:text-dark dark:hover:text-white transition"
+            }
+            onClick={handleModal}
+          >
             <FontAwesomeIcon icon={faSearch} size="lg" />
             <span className="font-semibold dark:font-extrabold ms-4">
               Search
