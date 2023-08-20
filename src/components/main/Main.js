@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Aside from "../ui/Aside";
 
 const Main = () => (
-  <div className="lg:grid lg:grid-cols-12 lg:gap-4 px-6 mb-28">
+  <div className="lg:grid lg:grid-cols-12 lg:gap-4 px-6 mb-32">
     <Aside />
     <section className="col-span-9 lg:p-0">
       <main>
