@@ -45,7 +45,6 @@ function App() {
   });
 
   const { theme } = themeState;
-  console.log(user);
 
   window
     .matchMedia("(prefers-color-scheme: dark)")

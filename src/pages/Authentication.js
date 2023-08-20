@@ -13,8 +13,6 @@ const AuthenticationPage = () => {
 
   const authMode = searchParams.get("mode");
 
-  console.log(actionData);
-
   useEffect(() => {
     if (actionData?.status === "fail") {
       //   setErrorDialog(true);

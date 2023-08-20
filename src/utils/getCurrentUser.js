@@ -20,8 +20,6 @@ const getCurrentUser = async () => {
 
     const { data } = await response.json();
 
-    console.log(data);
-
     return data.user;
   } catch (e) {
     console.error(e);
