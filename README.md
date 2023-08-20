@@ -38,7 +38,7 @@ The SpotifyMERN Backend API serves as the core of the SpotifyMERN platform, prov
 
 ## TailwindCSS Styling
 
-[![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/spotifymern-mobile-dark.png)](https://spotifymern.vercel.app)
+[![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/spotifymern-desktop-dark.png)](https://spotifymern.vercel.app)
 
 Please visit here to see the backend code: [SpotifyMERN - Backend](https://github.com/hsyntes/spotifymern-api)
 
