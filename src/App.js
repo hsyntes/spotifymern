@@ -6,13 +6,13 @@ import HomePage from "./pages/Home";
 import { useDispatch, useSelector } from "react-redux";
 import { themeSliceActions } from "./store/theme/theme-slice";
 import { useEffect } from "react";
-import CategoriesPage from "./pages/Categories";
 import MusicsPage from "./pages/Musics";
 import AuthenticationPage from "./pages/Authentication";
 import getCurrentUser from "./utils/getCurrentUser";
 import { useQuery } from "react-query";
 import { currentUserSliceActions } from "./store/user/user-slice";
 import Splash from "./components/ui/Splash";
+import CategoryPage from "./pages/Category";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "category/:category", element: <CategoriesPage /> },
+      { path: "category/:category", element: <CategoryPage /> },
       { path: "musics", element: <MusicsPage /> },
     ],
   },

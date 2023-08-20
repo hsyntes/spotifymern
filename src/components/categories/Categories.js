@@ -27,7 +27,7 @@ const Categories = ({ categories }) => {
                 loading="lazy"
               />
               <span className="lg:hidden peer group-hover:flex items-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 select-none cursor-pointer">
-                <span className="text-4xl me-3">
+                <span className="font-extrabold text-4xl me-3">
                   {category._id.toUpperCase()}
                 </span>
               </span>

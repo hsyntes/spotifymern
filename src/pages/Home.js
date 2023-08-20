@@ -7,6 +7,7 @@ import Categories from "../components/categories/Categories";
 import Recommended from "../components/recommended/Recommended";
 import CreatePlaylist from "../components/playlist/CreatePlaylist";
 import BrowseSongs from "../components/musics/BrowseSongs";
+import getRecommendedMusics from "../utils/getRecommendedMusics";
 
 const HomePage = () => {
   const { data: musics, isLoading: isMusicsLoading } = useQuery({
@@ -20,7 +21,14 @@ const HomePage = () => {
     refetchOnWindowFocus: false,
   });
 
-  if (isMusicsLoading || isCategoriesLoading) return <Splash />;
+  const { data: recommendedMusics, isLoading: isRecommendedMusicsLoading } =
+    useQuery({
+      queryKey: "getRecommendedMusics",
+      queryFn: getRecommendedMusics,
+    });
+
+  if (isMusicsLoading || isCategoriesLoading || isRecommendedMusicsLoading)
+    return <Splash />;
 
   return (
     <>
@@ -29,7 +37,7 @@ const HomePage = () => {
       <section className="block lg:hidden mb-10">
         <CreatePlaylist />
       </section>
-      <Recommended />
+      <Recommended musics={recommendedMusics} />
       <section className="block lg:hidden mb-10">
         <BrowseSongs />
       </section>

@@ -5,7 +5,7 @@ import Spinner from "../components/ui/Spinner";
 import Playlist from "../components/playlist/Playlist";
 import PlaylistHeader from "../components/playlist/PlaylistHeader";
 
-const CategoriesPage = () => {
+const CategoryPage = () => {
   const params = useParams();
 
   const { category } = params;
@@ -33,4 +33,4 @@ const CategoriesPage = () => {
   );
 };
 
-export default CategoriesPage;
+export default CategoryPage;
