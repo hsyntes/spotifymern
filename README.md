@@ -36,6 +36,12 @@ React-Router is used for client-side routing, allowing smooth navigation between
 
 The SpotifyMERN Backend API serves as the core of the SpotifyMERN platform, providing user authentication, data management, AWS Cloud and more. Explore the API documentation for detailed information on endpoints, usage, and integration.
 
+## AWS Cloud Integration
+
+Loading songs from AWS
+
+[![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/aws-mobile-dark.png)](https://spotifymern.vercel.app)
+
 ## TailwindCSS Styling
 
 [![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/spotifymern-desktop-dark.png)](https://spotifymern.vercel.app)
