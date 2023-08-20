@@ -67,6 +67,10 @@ const CreatePlaylistModal = ({ modal, handleModal }) => {
           ) : (
             <MusicsToAdd musics={searchedMusics} />
           )
+        ) : isRecommendedMusicsLoading ? (
+          <center>
+            <Spinner />
+          </center>
         ) : (
           <MusicsToAdd musics={recommendedMusics} />
         )}
