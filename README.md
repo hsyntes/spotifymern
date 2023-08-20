@@ -4,6 +4,12 @@
 
 Welcome to the frontend documentation of SpotifyMERN, a music streaming application inspired by Spotify. This documentation provides an overview of the frontend architecture, components, and key functionalities of the application.
 
+### Backend API
+
+The SpotifyMERN Backend API serves as the core of the SpotifyMERN platform, providing user authentication, data management, AWS Cloud and more. Explore the API documentation for detailed information on endpoints, usage, and integration.
+
+Please visit here to see the backend code: [SpotifyMERN - Backend](https://github.com/hsyntes/spotifymern-api)
+
 ## Technologies Used
 
 React: A JavaScript library for building user interfaces, providing a component-based architecture and efficient rendering.
@@ -32,10 +38,6 @@ Redux is used for global state management in the frontend. It stores user authen
 
 React-Router is used for client-side routing, allowing smooth navigation between different pages and managing URLs for specific content.
 
-### SpotifyMERN Backend API
-
-The SpotifyMERN Backend API serves as the core of the SpotifyMERN platform, providing user authentication, data management, AWS Cloud and more. Explore the API documentation for detailed information on endpoints, usage, and integration.
-
 ## AWS Cloud Integration
 
 Amazon S3 is used for storing and serving musics, including categories, thumbnail images and users' profile pictures.
@@ -45,8 +47,6 @@ Amazon S3 is used for storing and serving musics, including categories, thumbnai
 ## TailwindCSS Styling
 
 [![SpotifyMERN](https://spotifymern.s3.us-east-2.amazonaws.com/screenshots/spotifymern-desktop-dark.png)](https://spotifymern.vercel.app)
-
-Please visit here to see the backend code: [SpotifyMERN - Backend](https://github.com/hsyntes/spotifymern-api)
 
 ## Powerful MongoDB Atlash Search Engine
 
