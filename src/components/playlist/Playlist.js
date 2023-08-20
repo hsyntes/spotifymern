@@ -4,16 +4,19 @@ import { musicSliceActions } from "../../store/music/music-slice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
-const Playlist = ({ musics }) => {
+const Playlist = ({ title, musics }) => {
   const musicState = useSelector((state) => state.music);
   const dispatch = useDispatch();
 
   return (
-    <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-8">
+    <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-12">
+      <Card.Header className="mb-6">
+        <h1 className="font-semibold text-2xl">{title}</h1>
+      </Card.Header>
       <ul>
         {musics?.map((music) => (
           <li
-            className="flex items-center mb-4 last:mb-0 cursor-pointer p-2 lg:p-4 rounded hover:bg-light hover:dark:bg-darker"
+            className="flex items-center mb-1 last:mb-0 cursor-pointer p-2 lg:p-4 rounded hover:bg-light hover:dark:bg-darker"
             onClick={() =>
               dispatch(musicSliceActions.setSelectedMusic(music.source))
             }

@@ -5,9 +5,9 @@ const Categories = ({ categories }) => {
   const navigate = useNavigate();
 
   return (
-    <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-8">
-      <Card.Header className="mb-8">
-        <h1 className="font-semibold text-xl">Categories</h1>
+    <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-12">
+      <Card.Header className="mb-6">
+        <h1 className="font-semibold text-2xl">Categories</h1>
       </Card.Header>
       <Card.Body className="grid grid-cols-12 gap-3">
         {categories?.map((category) => (

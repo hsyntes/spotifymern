@@ -10,8 +10,8 @@ const Musics = ({ musics }) => {
   const dispatch = useDispatch();
 
   return (
-    <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-8">
-      <Card.Header className="flex items-center mb-8">
+    <Card className="!rounded-none !shadow-none lg:!rounded-md lg:!shadow !bg-light lg:!bg-white dark:!bg-black dark:lg:!bg-dark !p-0 lg:!p-6 mb-12">
+      <Card.Header className="flex items-center mb-6">
         <h1 className="font-semibold text-2xl">SpotifyMERN musics</h1>
         <Link
           to="/musics"
