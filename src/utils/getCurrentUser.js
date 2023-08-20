@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 const getCurrentUser = async () => {
   try {
     const response = await fetch(
-      "http://localhost:8000/spotifymern/users/authorization/current-user",
+      "https://spotifymern-7660789c547e.herokuapp.com/spotifymern/users/authorization/current-user",
       {
         method: "GET",
         headers: {
@@ -16,9 +16,13 @@ const getCurrentUser = async () => {
       }
     );
 
+    console.log(response);
+
     if (!response.ok) return null;
 
     const { data } = await response.json();
+
+    console.log(data);
 
     return data.user;
   } catch (e) {

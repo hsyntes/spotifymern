@@ -1,6 +1,6 @@
 const searchMusics = async (name) => {
   const response = await fetch(
-    `http://localhost:8000/spotifymern/musics/search/${name}`
+    `https://spotifymern-7660789c547e.herokuapp.com/spotifymern/musics/search/${name}`
   );
 
   const { data } = await response.json();

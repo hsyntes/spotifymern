@@ -1,6 +1,6 @@
 const getCategories = async () => {
   const response = await fetch(
-    "http://localhost:8000/spotifymern/musics/categories"
+    "https://spotifymern-7660789c547e.herokuapp.com/spotifymern/musics/categories"
   );
 
   const { data } = await response.json();

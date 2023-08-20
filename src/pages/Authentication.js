@@ -41,7 +41,7 @@ export const action = async ({ request }) => {
 
   if (authMode === "login") {
     const response = await fetch(
-      "http://localhost:8000/spotifymern/users/login",
+      "https://spotifymern-7660789c547e.herokuapp.com/spotifymern/users/login",
       {
         method: "POST",
         headers: {
@@ -63,7 +63,7 @@ export const action = async ({ request }) => {
 
   if (authMode === "signup") {
     const response = await fetch(
-      "http://localhost:8000/spotifymern/users/signup",
+      "https://spotifymern-7660789c547e.herokuapp.com/spotifymern/users/signup",
       {
         method: "POST",
         headers: {
