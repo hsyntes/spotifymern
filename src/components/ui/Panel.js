@@ -15,6 +15,10 @@ const Panel = () => {
 
   const handleModal = () => setModal(!modal);
 
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") setModal(false);
+  });
+
   return (
     <>
       <ul className="rounded-md shadow bg-white dark:bg-dark mb-4 p-6">

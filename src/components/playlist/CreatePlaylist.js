@@ -10,6 +10,10 @@ const CreatePlaylist = () => {
 
   const handleModal = () => setModal(!modal);
 
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") setModal(false);
+  });
+
   return (
     <>
       <Card className="bg-white dark:bg-dark rounded-md mb-4 !p-6">

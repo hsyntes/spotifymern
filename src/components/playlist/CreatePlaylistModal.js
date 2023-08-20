@@ -6,6 +6,8 @@ import useInput from "../../hooks/useInput";
 import searchMusics from "../../utils/searchMusics";
 import { useQuery } from "react-query";
 import getRecommendedMusics from "../../utils/getRecommendedMusics";
+import MusicsToAdd from "../musics/MusicsToAdd";
+import Spinner from "../ui/Spinner";
 
 const CreatePlaylistModal = ({ modal, handleModal }) => {
   const {
@@ -29,7 +31,10 @@ const CreatePlaylistModal = ({ modal, handleModal }) => {
     });
 
   return (
-    <Modal show={modal} className="w-5/6 lg:w-2/4 py-8">
+    <Modal
+      show={modal}
+      className="w-5/6 lg:w-2/4 py-8 max-h-screen my-8 overflow-scroll"
+    >
       <Modal.Header>
         <Input
           type="text"
@@ -46,8 +51,25 @@ const CreatePlaylistModal = ({ modal, handleModal }) => {
           onClick={handleModal}
         />
       </Modal.Header>
-      <Modal.Body>
-        <h6 className="font-semibold">Suggestions</h6>
+      <Modal.Body className="">
+        <h6 className="font-semibold text-lg mb-4">
+          {searchedMusics ? (
+            <span>Search results</span>
+          ) : (
+            <span>Suggestions</span>
+          )}
+        </h6>
+        {search ? (
+          isSearchMusicsLoading ? (
+            <center>
+              <Spinner />
+            </center>
+          ) : (
+            <MusicsToAdd musics={searchedMusics} />
+          )
+        ) : (
+          <MusicsToAdd musics={recommendedMusics} />
+        )}
       </Modal.Body>
     </Modal>
   );

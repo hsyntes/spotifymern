@@ -9,6 +9,10 @@ const SearchMusics = () => {
 
   const handleModal = () => setModal(!modal);
 
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") setModal(false);
+  });
+
   return (
     <>
       <center className="lg:hidden relative mb-6" onClick={handleModal}>

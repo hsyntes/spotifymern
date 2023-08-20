@@ -11,7 +11,7 @@ const BrowseSongs = () => {
     <Card className="bg-white dark:bg-dark rounded-md !p-6">
       <Card.Header>
         <h6 className="font-bold text-xl lg:text-base lg:font-medium">
-          Like songs your favorites
+          Listen songs your favorites
         </h6>
       </Card.Header>
       <Card.Body className="mb-4">
