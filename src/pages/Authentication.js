@@ -3,20 +3,30 @@ import Container from "../components/ui/Container";
 import Signup from "../components/auth/Signup";
 import Login from "../components/auth/Login";
 import { useQueryClient } from "react-query";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ErrorDialog from "../components/ui/ErrorDialog";
 
 const AuthenticationPage = () => {
   const [searchParams] = useSearchParams();
   const actionData = useActionData();
   const queryClient = useQueryClient();
+  const [errorDialog, setErrorDialog] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
   const navigate = useNavigate();
 
   const authMode = searchParams.get("mode");
+
+  const handleError = () => setErrorDialog(false);
 
   useEffect(() => {
     if (actionData?.status === "fail") {
       //   setErrorDialog(true);
       //   setErrorMessage(actionData.message);
+
+      console.log(actionData);
+
+      setErrorDialog(true);
+      setErrorMessage(actionData.message);
     }
 
     if (actionData?.status === "success") {
@@ -27,9 +37,16 @@ const AuthenticationPage = () => {
   }, [actionData, queryClient, navigate]);
 
   return (
-    <Container className="h-screen flex items-center justify-center my-8">
-      {authMode === "signup" ? <Signup /> : <Login />}
-    </Container>
+    <>
+      <Container className="h-screen flex items-center justify-center my-8">
+        {authMode === "signup" ? <Signup /> : <Login />}
+      </Container>
+      <ErrorDialog
+        show={errorDialog}
+        message={errorMessage}
+        handleError={handleError}
+      />
+    </>
   );
 };
 
