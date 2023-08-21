@@ -11,8 +11,6 @@ const AudioPlayer = () => {
     queryFn: () => getMusic(music.id),
   });
 
-  console.log(currentMusic);
-
   return (
     <div className="w-full flex items-center justify-center fixed bottom-0 rounded p-4">
       <audio
