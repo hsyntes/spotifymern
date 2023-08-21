@@ -35,12 +35,7 @@ const AudioPlayer = () => {
 
   return (
     <div className="w-full flex items-center justify-center fixed bottom-0 rounded p-4">
-      <audio
-        ref={audioRef}
-        src={music.source}
-        // controls
-        autoPlay={isPlaying}
-      />
+      <audio ref={audioRef} src={music.source} autoPlay={isPlaying} />
       {currentMusic && (
         <div
           className="w-96 lg:w-2/4 xl:w-1/4 rounded shadow-lg dark:border-2 dark:border-gray-700 flex items-center bg-white dark:bg-black cursor-pointer mx-auto p-4"
