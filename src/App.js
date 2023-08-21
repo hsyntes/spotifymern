@@ -13,11 +13,13 @@ import { useQuery } from "react-query";
 import { currentUserSliceActions } from "./store/user/user-slice";
 import Splash from "./components/ui/Splash";
 import CategoryPage from "./pages/Category";
+import ErrorPage from "./pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
       { path: "category/:category", element: <CategoryPage /> },
