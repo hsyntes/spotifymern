@@ -20,11 +20,6 @@ const AuthenticationPage = () => {
 
   useEffect(() => {
     if (actionData?.status === "fail") {
-      //   setErrorDialog(true);
-      //   setErrorMessage(actionData.message);
-
-      console.log(actionData);
-
       setErrorDialog(true);
       setErrorMessage(actionData.message);
     }
