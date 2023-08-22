@@ -18,7 +18,7 @@ const HomePage = () => {
   const { data: categories, isLoading: isCategoriesLoading } = useQuery({
     queryKey: "getCategories",
     queryFn: getCategories,
-    // refetchOnWindowFocus: false,
+    refetchOnWindowFocus: false,
   });
 
   const { data: recommendedMusics, isLoading: isRecommendedMusicsLoading } =
