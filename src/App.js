@@ -1,7 +1,6 @@
 import "./App.css";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Layout from "./components/layout/Layout";
 import HomePage from "./pages/Home";
 import { useDispatch, useSelector } from "react-redux";
 import { themeSliceActions } from "./store/theme/theme-slice";
@@ -19,7 +18,6 @@ import RootLayoutPage from "./pages/RootLayout";
 const router = createBrowserRouter([
   {
     path: "/",
-    // element: <Layout />,
     element: <RootLayoutPage />,
     errorElement: <ErrorPage />,
     children: [

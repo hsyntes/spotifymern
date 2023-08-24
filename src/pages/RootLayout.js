@@ -5,23 +5,21 @@ import Aside from "../components/ui/Aside";
 import AudioPlayer from "../components/ui/AudioPlayer";
 import Footer from "../components/footer/Footer";
 
-const RootLayoutPage = () => {
-  return (
-    <div className="App">
-      <Header />
-      <SearchMusics />
-      <section className="lg:grid lg:grid-cols-12 lg:gap-4 px-6 mb-32">
-        <Aside />
-        <section className="col-span-9 lg:p-0">
-          <main>
-            <Outlet />
-          </main>
-          <Footer />
-        </section>
+const RootLayoutPage = () => (
+  <div className="App">
+    <Header />
+    <SearchMusics />
+    <section className="lg:grid lg:grid-cols-12 lg:gap-4 px-6 mb-32">
+      <Aside />
+      <section className="col-span-9 lg:p-0">
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
       </section>
-      <AudioPlayer />
-    </div>
-  );
-};
+    </section>
+    <AudioPlayer />
+  </div>
+);
 
 export default RootLayoutPage;
