@@ -14,11 +14,13 @@ import { currentUserSliceActions } from "./store/user/user-slice";
 import Splash from "./components/ui/Splash";
 import CategoryPage from "./pages/Category";
 import ErrorPage from "./pages/Error";
+import RootLayoutPage from "./pages/RootLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    // element: <Layout />,
+    element: <RootLayoutPage />,
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
