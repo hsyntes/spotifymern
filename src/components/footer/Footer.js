@@ -18,7 +18,7 @@ const Footer = () => {
           src="https://avatars.githubusercontent.com/u/69708483?v=4"
           className="rounded-full"
           width={72}
-          alt="Category"
+          alt="Developer"
           loading="lazy"
         />
         <div className="ms-4 w-full">
