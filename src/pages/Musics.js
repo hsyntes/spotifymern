@@ -5,6 +5,7 @@ import Playlist from "../components/playlist/Playlist";
 import PlaylistHeader from "../components/playlist/PlaylistHeader";
 
 const MusicsPage = () => {
+  // Get all musics
   const { data: musics, isLoading: isMusicsLoading } = useQuery({
     queryKey: "getAllMusics",
     queryFn: getAllMusics,

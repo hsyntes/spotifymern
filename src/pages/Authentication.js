@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import ErrorDialog from "../components/ui/ErrorDialog";
 
 const AuthenticationPage = () => {
+  // Get query params
   const [searchParams] = useSearchParams();
   const actionData = useActionData();
   const queryClient = useQueryClient();
@@ -14,6 +15,7 @@ const AuthenticationPage = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const navigate = useNavigate();
 
+  // Get the mode based on the query param
   const authMode = searchParams.get("mode");
 
   const handleError = () => setErrorDialog(false);
@@ -45,12 +47,16 @@ const AuthenticationPage = () => {
   );
 };
 
+// React-Router action
 export const action = async ({ request }) => {
+  // Get authentiocation mode based on the search query
   const searchParams = new URL(request.url).searchParams;
 
+  // Get the current mode
   const authMode = searchParams.get("mode");
   const formData = await request.formData();
 
+  // login based on the query
   if (authMode === "login") {
     const response = await fetch(
       "https://spotifymern-7660789c547e.herokuapp.com/spotifymern/users/login",
@@ -73,6 +79,7 @@ export const action = async ({ request }) => {
     return data;
   }
 
+  // signup based on the query
   if (authMode === "signup") {
     const response = await fetch(
       "https://spotifymern-7660789c547e.herokuapp.com/spotifymern/users/signup",

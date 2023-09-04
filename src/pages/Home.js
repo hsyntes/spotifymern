@@ -10,17 +10,20 @@ import BrowseSongs from "../components/musics/BrowseSongs";
 import getRecommendedMusics from "../utils/getRecommendedMusics";
 
 const HomePage = () => {
+  // Get all musics
   const { data: musics, isLoading: isMusicsLoading } = useQuery({
     queryKey: "getMusics",
     queryFn: getMusics,
   });
 
+  // Get categories
   const { data: categories, isLoading: isCategoriesLoading } = useQuery({
     queryKey: "getCategories",
     queryFn: getCategories,
     refetchOnWindowFocus: false,
   });
 
+  // Get recommended musics
   const { data: recommendedMusics, isLoading: isRecommendedMusicsLoading } =
     useQuery({
       queryKey: "getRecommendedMusics",

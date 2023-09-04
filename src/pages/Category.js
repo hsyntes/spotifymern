@@ -10,6 +10,7 @@ const CategoryPage = () => {
 
   const { category } = params;
 
+  // Get musics under the category
   const { data: musics, isLoading: isMusicsLoading } = useQuery(
     ["getMusicByCategory", category],
     {

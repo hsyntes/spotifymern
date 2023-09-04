@@ -9,6 +9,7 @@ const RootLayoutPage = () => (
   <div className="App">
     <Header />
     <SearchMusics />
+    {/* Grid layout */}
     <section className="lg:grid lg:grid-cols-12 lg:gap-4 px-6 mb-32">
       <Aside />
       <section className="col-span-9 lg:p-0">

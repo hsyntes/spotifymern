@@ -15,6 +15,7 @@ import CategoryPage from "./pages/Category";
 import ErrorPage from "./pages/Error";
 import RootLayoutPage from "./pages/Root";
 
+// React-Router pages
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,7 +41,7 @@ function App() {
   const themeState = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
-  // * Fetching current user
+  //  Fetching current user
   const { data: user, isLoading: isUserLoading } = useQuery({
     queryKey: "getCurrentUser",
     queryFn: getCurrentUser,
@@ -54,7 +55,7 @@ function App() {
       dispatch(themeSliceActions.switchTheme(e.matches ? "dark" : "light"))
     );
 
-  // * Setting current user to redux
+  // Setting current user to redux
   useEffect(() => {
     if (user) dispatch(currentUserSliceActions.setCurrentUser(user));
     else dispatch(currentUserSliceActions.setCurrentUser(null));
