@@ -15,6 +15,7 @@ const CreatePlaylistModal = ({ modal, handleModal }) => {
     handleOnChange: handleSearchOnChange,
   } = useInput();
 
+  // Get musics based on the query
   const { data: searchedMusics, isLoading: isSearchMusicsLoading } = useQuery(
     ["searchMusics", search],
     {
@@ -24,6 +25,7 @@ const CreatePlaylistModal = ({ modal, handleModal }) => {
     }
   );
 
+  // Get recommended musics
   const { data: recommendedMusics, isLoading: isRecommendedMusicsLoading } =
     useQuery({
       queryKey: "getRecommendedMusics",

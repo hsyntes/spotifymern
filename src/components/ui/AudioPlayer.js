@@ -10,6 +10,7 @@ const AudioPlayer = () => {
   const musicState = useSelector((state) => state.music);
   const { music } = musicState;
 
+  // Get the current musics that plays
   const { data: currentMusic } = useQuery(["getMusic", music.id], {
     queryFn: () => getMusic(music.id),
   });
@@ -17,6 +18,7 @@ const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(currentMusic ? true : false);
   const audioRef = useRef(new Audio(currentMusic));
 
+  // Play/stop the music
   const handlePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
