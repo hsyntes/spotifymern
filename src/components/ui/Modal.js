@@ -19,7 +19,7 @@ const Modal = ({ show, className, children }) => {
   const classes = `modal bg-white dark:bg-dark rounded px-4 py-6 shadow ${className}`;
 
   return createPortal(
-    <div id="modal-backdrop" style={{ overflow: "hidden" }}>
+    <div id="modal-backdrop">
       <motion.div
         animate={{ opacity: [0.75, 1], scale: [1.1, 1] }}
         transition={{ ease: "easeOut", duration: 0.15 }}
