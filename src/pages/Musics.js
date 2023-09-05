@@ -3,6 +3,7 @@ import getAllMusics from "../utils/getAllMusics";
 import Spinner from "../components/ui/Spinner";
 import Playlist from "../components/playlist/Playlist";
 import PlaylistHeader from "../components/playlist/PlaylistHeader";
+import { useEffect } from "react";
 
 const MusicsPage = () => {
   // Get all musics
@@ -10,6 +11,10 @@ const MusicsPage = () => {
     queryKey: "getAllMusics",
     queryFn: getAllMusics,
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (isMusicsLoading)
     return (

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import getMusicByCategory from "../utils/getMusicsByCategory";
@@ -18,6 +19,10 @@ const CategoryPage = () => {
       refetchOnWindowFocus: false,
     }
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (isMusicsLoading)
     return (

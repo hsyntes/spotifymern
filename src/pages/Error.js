@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import Button from "../components/ui/Button";
 import logo from "../logo.svg";
 
 const ErrorPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="w-screen h-screen flex flex-col lg:flex-row items-center justify-center">
       <img src={logo} width={192} alt="App" className="mb-2 lg:mb-0" />

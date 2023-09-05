@@ -21,6 +21,10 @@ const AuthenticationPage = () => {
   const handleError = () => setErrorDialog(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (actionData?.status === "fail") {
       setErrorDialog(true);
       setErrorMessage(actionData.message);
