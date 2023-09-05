@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
 const Modal = ({ show, className, children }) => {
+  useEffect(() => {
+    const body = document.querySelector("body");
+
+    if (show) body.style.overflow = "hidden";
+    else body.style.overflow = "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [show]);
+
   if (!show) return null;
 
   const classes = `modal bg-white dark:bg-dark rounded px-4 py-6 shadow ${className}`;
 
   return createPortal(
-    <div id="modal-backdrop">
+    <div id="modal-backdrop" style={{ overflow: "hidden" }}>
       <motion.div
         animate={{ opacity: [0.75, 1], scale: [1.1, 1] }}
         transition={{ ease: "easeOut", duration: 0.15 }}
