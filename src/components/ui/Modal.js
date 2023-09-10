@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
-// import { useNavigate } from "react-router-dom";
 
 const Modal = ({ show, handleModal, className, children }) => {
   // const navigate = useNavigate();
