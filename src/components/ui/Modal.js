@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
+// import { useNavigate } from "react-router-dom";
 
-const Modal = ({ show, className, children }) => {
+const Modal = ({ show, handleModal, className, children }) => {
+  // const navigate = useNavigate();
+
   useEffect(() => {
     const body = document.querySelector("body");
 
@@ -14,9 +17,27 @@ const Modal = ({ show, className, children }) => {
     };
   }, [show]);
 
+  useEffect(() => {
+    const handlePopstate = () => {
+      if (show) handleModal();
+    };
+
+    window.addEventListener("popstate", handlePopstate);
+
+    return () => window.removeEventListener("popstate", handlePopstate);
+  }, [show, handleModal]);
+
   if (!show) return null;
 
   const classes = `modal bg-white dark:bg-dark rounded px-4 py-6 shadow ${className}`;
+
+  document.body.addEventListener("click", (e) => {
+    if (e.target === document.getElementById("modal-backdrop")) handleModal();
+  });
+
+  document.body.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") handleModal();
+  });
 
   return createPortal(
     <div id="modal-backdrop">

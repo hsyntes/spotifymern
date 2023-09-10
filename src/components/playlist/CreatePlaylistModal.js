@@ -35,6 +35,7 @@ const CreatePlaylistModal = ({ modal, handleModal }) => {
   return (
     <Modal
       show={modal}
+      handleModal={handleModal}
       className="w-11/12 lg:w-2/4 py-8 max-h-screen my-8 overflow-scroll"
     >
       <Modal.Header>

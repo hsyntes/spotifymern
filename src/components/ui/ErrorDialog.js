@@ -2,7 +2,7 @@ import Button from "./Button";
 import Modal from "./Modal";
 
 const ErrorDialog = ({ show, message, handleError }) => (
-  <Modal show={show} className="w-5/6 lg:w-1/4">
+  <Modal show={show} handleModal={handleError} className="w-5/6 lg:w-1/4">
     <Modal.Header>
       <h6 className="font-bold mx-auto text-lg">Error</h6>
     </Modal.Header>
